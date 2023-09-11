@@ -7,3 +7,11 @@ Lien sinon : https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Int
 
 Les snippets sont là : 
 C:\Users\[USER]\AppData\Roaming\Code\User\snippets
+
+https://wiki.python.org/moin/TimeComplexity
+A étudier pour optimiser les collections
+
+Livres .pdf à récupérer
+https://github.com/ajitpal/BookBank
+https://github.com/ajitpal/BookBank/blob/master/%5BO%60Reilly.%20Head%20First%5D%20-%20Head%20First%20Design%20Patterns%20-%20%5BFreeman%5D.pdf
+
