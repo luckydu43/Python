@@ -1,22 +1,22 @@
-def do_log(func):
-    print(50*'-')
-    print ("... J'ai encore rien fait !")
-    print ("On entre dans la fonction qui va injecter du code :")
-    print ("log:",func) # S'il n'y a pas quelque chose en paramètre ça pète.
-
-    def wrapper(*args, **kwargs):
-        # pass
+def do_log(prefix=""):
+    def wrapper_f(func):
         print(50*'-')
-        print("... on rentre dans le wrapper")
-        print ("On part de :", args, kwargs)
-        r = func(*args, **kwargs)
-        print ("On obtient :", r)
-        print(50*'-')
-        return r
-    
-    return wrapper
+        print ("... J'ai encore rien fait !")
+        print ("On entre dans la fonction qui va injecter du code :")
+        print ("log:",func) # S'il n'y a pas quelque chose en paramètre ça pète.
+        def wrapper(*args, **kwargs):
+            # pass
+            print(50*'-')
+            print("... on rentre dans le wrapper")
+            print ("On part de :", prefix, args, kwargs)
+            r = func(*args, **kwargs)
+            print ("On obtient :", r)
+            print(50*'-')
+            return r
+        return wrapper
+    return wrapper_f
 
-@do_log
+@do_log('Logger')
 def dis_bonjour(name):
     return f"Bonjour {name}"
 
