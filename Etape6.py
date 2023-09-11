@@ -1,13 +1,15 @@
 def do_log(prefix=""):
+    print(50*'-')
+    print ("... J'ai encore rien fait !")
+    print ("On entre dans la fonction qui va injecter du code")
     def wrapper_f(func):
         print(50*'-')
-        print ("... J'ai encore rien fait !")
-        print ("On entre dans la fonction qui va injecter du code :")
+        print ("On entre dans le premier wrapper")
         print ("log:",func) # S'il n'y a pas quelque chose en paramètre ça pète.
         def wrapper(*args, **kwargs):
             # pass
             print(50*'-')
-            print("... on rentre dans le wrapper")
+            print("... on rentre dans le second wrapper")
             print ("On part de :", prefix, args, kwargs)
             r = func(*args, **kwargs)
             print ("On obtient :", r)
@@ -18,6 +20,8 @@ def do_log(prefix=""):
 
 @do_log('Logger')
 def dis_bonjour(name):
+    print(50*'-')
+    print ("... on entre dans dis_bonjour")
     return f"Bonjour {name}"
 
 def Etape6():
