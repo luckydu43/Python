@@ -52,10 +52,10 @@ def Etape1():
         [50, 60]
     ]
     print ('copie profonde avant insertion de 5000')
-    listeimbriquee2 = copy.deepcopy(listeimbriquee)
+    listeimbriquee2 = deepcopy(listeimbriquee)
     listeimbriquee[2][0] = 5000
     pprint(listeimbriquee)
     pprint(listeimbriquee2)
 
 if __name__ == "__main__":
-    test()
+    Etape1()
