@@ -1,0 +1,9 @@
+################################################
+# formation Python Perfectionnement 11/09/2023 #
+################################################
+
+hello.ipynb dans VSCode crée une instance de jupyter Notebook
+Lien sinon : https://jupyter.org/try-jupyter/retro/notebooks/?path=notebooks/Intro.ipynb
+
+Les snippets sont là : 
+C:\Users\[USER]\AppData\Roaming\Code\User\snippets
