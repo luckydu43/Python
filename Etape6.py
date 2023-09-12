@@ -1,6 +1,6 @@
 def do_log(prefix=""):
     print(50*'-')
-    print ("... J'ai encore rien fait !")
+    print ("DECORATEURS")
     print ("On entre dans la fonction qui va injecter du code")
     def wrapper_f(func):
         print(50*'-')
