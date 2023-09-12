@@ -18,10 +18,23 @@ https://github.com/ajitpal/BookBank/blob/master/%5BO%60Reilly.%20Head%20First%5D
 Conventions de nommage
 https://peps.python.org/pep-0008/
 
+Très bon site de formation Python
+https://realpython.com/
+
 Fichier python vide:
 def Etape():
     print(50*'-')
-    print ("New")
+    print ("")
     print(50*'-')
+	
 if __name__ == "__main__":
     Etape()
+
+Constructeur d'une classe:
+def __init__():
+
+def __init__(self, *args: object) -> None:
+	super().__init__(*args)
+	
+def __init__(self) -> None:
+	super().__init__("Division par 12 interdite")
