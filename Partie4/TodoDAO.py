@@ -10,9 +10,11 @@ class TodoDAO:
     def findAll(self):
         cursor = self._connection.cursor()
         result = cursor.execute("SELECT * FROM todos_table")
+        ##todos=[]
         for id, title, completed in result.fetchall():
-            t = Todo(id, title, completed)
-            print(t)
+            yield Todo(id, title, completed)
+            ##todos.append(Todo(id, title, completed))
+        ##return todos
 
     def __del__(self):
         self._connection.close()
