@@ -5,7 +5,7 @@ def completed_todos(generator_todos):
         if todo.completed :
             yield todo
 
-def Main():
+def Partie11():
     print(50*'-')
     print ("")
     print(50*'-')
@@ -16,4 +16,4 @@ def Main():
     ##    print(todo)
 	
 if __name__ == "__main__":
-    Main()
+    Partie11()
