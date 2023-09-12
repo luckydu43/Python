@@ -21,6 +21,17 @@ https://peps.python.org/pep-0008/
 Très bon site de formation Python
 https://realpython.com/
 
+Bibliotheque SQL
+https://www.sqlalchemy.org/
+
+BDD
+https://sqlitebrowser.org/dl/
+
+Générateur de data
+https://www.mockaroo.com/
+
+
+
 Fichier python vide:
 def Etape():
     print(50*'-')
