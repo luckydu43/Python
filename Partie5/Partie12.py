@@ -1,3 +1,4 @@
+from multiprocessing.pool import ThreadPool
 import threading
 import time
 from bs4 import BeautifulSoup
@@ -10,7 +11,7 @@ def download_Url(url):
 
 def Etape12():
     print(50*'-')
-    print ("Scrapper une page HTML en threadé")
+    print ("Scrapper une page HTML avec un pool de threads")
     print(50*'-')
     
     start= time.perf_counter()
@@ -29,15 +30,25 @@ def Etape12():
     #for link in soup.find_all('a'):
     #    if not str(link.get('href')).startswith('?'):
     #        print(link.get('href'))
+
+    with ThreadPool(61) as threadpool:
+        threadpool.map(download_Url, all_a)
+        
+    """
     threads = []
 
     for url_log in all_a:
+        
+        # Avec Thread
         thread = threading.Thread(target=download_Url,args=[url_log])
         thread.start()
         threads.append(thread)
+
+        # Sans Thread
         # download_Url(url_log)
     for thread in threads:
         thread.join()
+    """
     print("Temps passé :", float(time.perf_counter()-start).__round__(2), 'secondes')
 if __name__ == "__main__":
     Etape12()
