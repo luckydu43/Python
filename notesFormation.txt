@@ -70,3 +70,30 @@ Installation de Docker
 ###############################
 https://www.docker.com/products/docker-desktop/
 
+
+
+Pour trouver une image (les officielles sont taguées) :
+https://hub.docker.com/search?q=redis
+
+Il y a un bouton pull
+C'est le docker pull
+
+Pour configurer le dossier python avec rabbitmq :
+cd dossierPython
+python -m venv .venv
+.venv\Scripts\activate
+pip install celery
+https://docs.celeryq.dev/en/stable/getting-started/introduction.html#bundles
+pip install "celery[librabbitmq,redis,auth,msgpack]"
+
+Run le container
+	nom pour le trouver facilement sinon il marque n'imp au sens drôle
+	binding de port, il faut en faire au moins un. Par défaut taper 5672 en face de :5672
+	binding de répertoire, c'est possible aussi
+
+Dans le dossier python, créer un celeryWorker.py avec le code ici:
+https://docs.celeryq.dev/en/stable/getting-started/introduction.html#celery-is
+Si l'interpréteur est bien le python.exe du dossier il trouve ses dépendances
+
+Dans l'invite venv taper
+celery -A celeryWorker worker --loglevel=info
