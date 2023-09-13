@@ -63,3 +63,10 @@ Pour voir ce qui est installé
 Pour voir ce qui est installé sous forme traitable clé valeur
 	pip freeze
 	pip freeze > requirements.txt
+
+
+###############################
+Installation de Docker
+###############################
+https://www.docker.com/products/docker-desktop/
+

@@ -16,7 +16,7 @@ async def download_Url(url, semaphore):
             with open (url.split('/')[-1], 'w') as f:
                 f.write(response.text)
 
-async def Etape12():
+async def Etape16():
     print(50*'-')
     print ("Scrapper une page HTML avec des co-routines")
     print(50*'-')
@@ -37,4 +37,4 @@ async def Etape12():
  
     print("Temps passé :", float(time.perf_counter()-start).__round__(2), 'secondes')
 if __name__ == "__main__":
-    asyncio.run(Etape12())
+    asyncio.run(Etape16())

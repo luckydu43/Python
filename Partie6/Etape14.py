@@ -7,16 +7,19 @@ from typing import Any
 
 semaphore = threading.Lock()
 
+# Methode threadée avec sémaphore
 def traitement_long_1():
     with semaphore:
         for i in range(5):
             print(f"traitement_long_1 {i} - {threading.current_thread()}")
 
+# Methode threadée avec sémaphore
 def traitement_long_2():
     with semaphore:
         for i in range(5):
             print(f"traitement_long_2 {i} - {threading.current_thread()}")
 
+# classe proposant une méthode threadée sans sémaphore
 class TheThread(threading.Thread):
     def __init__(self) -> None:
         super().__init__(
@@ -44,7 +47,7 @@ def Etape14():
     TheThread2.start()
     TheThread1.join()
     TheThread2.join()
-
+    # Mettre un join permet à la méthode Etape14 d'attendre la fin d'exécution de son thread
     print("Fin des threads")
 
 if __name__ == "__main__":
