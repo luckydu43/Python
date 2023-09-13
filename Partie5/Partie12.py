@@ -1,3 +1,4 @@
+import threading
 import time
 from bs4 import BeautifulSoup
 import requests
@@ -8,10 +9,11 @@ def download_Url(url):
         f.write(response.text)
 
 def Etape12():
+    print(50*'-')
+    print ("Scrapper une page HTML en threadé")
+    print(50*'-')
+    
     start= time.perf_counter()
-    print(50*'-')
-    print ("Scrapper une page HTML")
-    print(50*'-')
     url="http://logs.eolem.com/"
     response = requests.get(url)
     html = response.text
@@ -27,9 +29,15 @@ def Etape12():
     #for link in soup.find_all('a'):
     #    if not str(link.get('href')).startswith('?'):
     #        print(link.get('href'))
+    threads = []
 
     for url_log in all_a:
-        download_Url(url_log)
+        thread = threading.Thread(target=download_Url,args=[url_log])
+        thread.start()
+        threads.append(thread)
+        # download_Url(url_log)
+    for thread in threads:
+        thread.join()
     print("Temps passé :", float(time.perf_counter()-start).__round__(2), 'secondes')
 if __name__ == "__main__":
     Etape12()
