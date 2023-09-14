@@ -143,3 +143,20 @@ Installation de Bootstrap :
 
 scrolle, trouve "Include Via CDN"
 colle la grande balise link dans le head
+
+#########
+Streamlit
+#########
+Bibliothèque Python qui permet de faire des applications Web très facilement
+https://docs.streamlit.io/library/cheatsheet
+https://docs.streamlit.io/library/get-started/main-concepts
+https://docs.streamlit.io/library/get-started/create-an-app
+
+Dans le CMD .venv
+	pip install streamlit
+Créer le main .py avec le code streamlit
+J'ai juste mis streamlit.title('Hello form the other S... treamlit')
+Dans le CMD .venv :
+	streamlit run Etape19Streamlit.py
+Puis
+	http://localhost:8501
