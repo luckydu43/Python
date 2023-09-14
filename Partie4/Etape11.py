@@ -7,7 +7,7 @@ def completed_todos(generator_todos):
 
 def Partie11():
     print(50*'-')
-    print ("")
+    print ("Implémentation d'une DAO")
     print(50*'-')
     dao = TodoDAO(r"Partie4\todos_db.db")
     for todo in completed_todos(dao.findAll()):

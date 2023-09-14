@@ -30,6 +30,8 @@ https://sqlitebrowser.org/dl/
 Générateur de data
 https://www.mockaroo.com/
 
+Formation sur la refactorisation
+https://refactoring.guru/fr
 
 
 Fichier python vide:
@@ -160,3 +162,8 @@ Dans le CMD .venv :
 	streamlit run Etape19Streamlit.py
 Puis
 	http://localhost:8501
+
+#######
+Jupyter
+#######
+Jupyter réclame ipykernel
