@@ -82,6 +82,7 @@ Pour configurer le dossier python avec rabbitmq :
 cd dossierPython
 python -m venv .venv
 .venv\Scripts\activate
+deactivate
 pip install celery
 https://docs.celeryq.dev/en/stable/getting-started/introduction.html#bundles
 pip install "celery[librabbitmq,redis,auth,msgpack]"
@@ -97,3 +98,48 @@ Si l'interpréteur est bien le python.exe du dossier il trouve ses dépendances
 
 Dans l'invite venv taper
 celery -A celeryWorker worker --loglevel=info
+
+
+#####################################
+Bases de données
+#####################################
+cd dossierPython
+python -m venv .venv
+.venv\Scripts\activate
+pip install flask
+dans un app.py (et pas autre chose pour le moment) :
+	https://flask.palletsprojects.com/en/2.3.x/quickstart/#a-minimal-application
+Dans un CMD élevé :
+	.venv\Scripts\activate
+dans le CMD venv :
+	flask run
+Y acceder avec 127.0.0.1:5000
+
+##########
+Ecrire le html
+#######################
+VSCode vient avec emmet
+#######################
+	html:5
+donne une page complete
+
+	table>thead>tr>th*4
+ donne
+	<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+  </table>
+
+Alternative à Bootstrap : tailwindcss
+############################
+Installation de Bootstrap :
+############################
+
+scrolle, trouve "Include Via CDN"
+colle la grande balise link dans le head
