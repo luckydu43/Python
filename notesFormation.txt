@@ -53,11 +53,15 @@ def __init__(self) -> None:
 	super().__init__("Division par 12 interdite")
 
 Création d'un environnement virtuel
+	pip install virtualenv
+	virtualenv .venv
+	source .venv/bin/activate
 	python -m venv .venv
 Activer l'environnement virtuel
 	.venv\Scripts\activate
 	Ca affiche 
 	(.venv) C:\Users\Administrateur\Desktop\Python\Partie5>
+
 Pour installer les dépendances depuis Internet ou un Nexus
 	pip install beautifulsoup4 requests
 Pour voir ce qui est installé
