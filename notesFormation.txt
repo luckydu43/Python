@@ -33,6 +33,10 @@ https://www.mockaroo.com/
 Formation sur la refactorisation
 https://refactoring.guru/fr
 
+emplacement clé SSH sur Termux
+/data/data/com.termux/files/usr/etc/ssh
+emplacement depuis home
+cd ../usr/etc/ssh
 
 Fichier python vide:
 def Etape():
